@@ -29,11 +29,17 @@ docker images
 docker ps -a
 
 docker build -t nmglabs-tomcat:latest .
+
 docker build --build-arg foo=value -t nmglabs-tomcat:latest .
+
 docker run --rm nmglabs-tomcat:latest
+
 docker run -d --name nmglabs -p 80:8080 nmglabs-tomcat:latest
+
 docker run -v /home/data:/data -d --name nmglabs -p 80:8080 nmglabs-tomcat:latest
+
 docker exec -it nmglabs /bin/bash
+
 docker sudo docker cp index.html nmglabs:/usr/local/tomcat/
 docker cp nmglabs:/usr/local/tomcat/index.html /home/data
 docker tag nmglabs-tomcat:latest username/nmglabs-tomcat:v1
