@@ -3,7 +3,7 @@
 3. Docker is a containerisation platform – it is a toolkit that allows you to build, deploy and manage containerised applications.
 4. Docker comes with a command line interface (CLI), using which you can do all of the operations that the platform provides
 
-Install Docker 
+***Install Docker***
 
 sudo yum install docker -y
 
@@ -41,15 +41,25 @@ docker run -v /home/data:/data -d --name nmglabs -p 80:8080 nmglabs-tomcat:lates
 docker exec -it nmglabs /bin/bash
 
 docker sudo docker cp index.html nmglabs:/usr/local/tomcat/
+
 docker cp nmglabs:/usr/local/tomcat/index.html /home/data
+
 docker tag nmglabs-tomcat:latest username/nmglabs-tomcat:v1
+
 docker login
+
 sudo docker push username/nmglabs-tomcat:v1
+
 docker logs nmglabs
+
 docker logs nmglabs --follow
+
 docker inspect nmglabs
+
 docker rm nmglabs --force
+
 docker rmi demo-image:latest
+
 docker stats nmglabs
 
 
