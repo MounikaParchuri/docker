@@ -1,6 +1,9 @@
 Docker is a open source software platform that allows developers to build, test, and deploy applications quickly.
+
 Containers are something like a virtual machine, it has its operating system.Isolated Environment
+
 Docker is a containerisation platform – it is a toolkit that allows you to build, deploy and manage containerised applications.
+
 Docker comes with a command line interface (CLI), using which you can do all of the operations that the platform provides
 
 # **Install Docker**
@@ -14,7 +17,9 @@ sudo service docker start
 # **Create docker user and add to docker group**
 
 sudo groupadd docker 
+
 sudo usermod -aG docker $USER
+
 newgrp docker
 
 # **Docker Commands**
