@@ -3,15 +3,15 @@
 3. Docker is a containerisation platform – it is a toolkit that allows you to build, deploy and manage containerised applications.
 4. Docker comes with a command line interface (CLI), using which you can do all of the operations that the platform provides
 
-<h4>Install Docker</h4> 
+#### **Install Docker**
 
 sudo yum install docker -y
 
-***Start Docker service***
+#### **Start Docker service**
 
 sudo service docker start
 
-***Create docker user and add to docker group***
+#### **Create docker user and add to docker group**
 
 sudo groupadd docker 
 sudo usermod -aG docker $USER
