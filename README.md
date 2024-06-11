@@ -25,12 +25,19 @@ newgrp docker
 # **Docker Commands**
 
 docker system df
+
 docker system info
+
 docker version
+
 docker start
+
 docker status
+
 docker stop
+
 docker images
+
 docker ps -a
 
 docker build -t nmglabs-tomcat:latest .
