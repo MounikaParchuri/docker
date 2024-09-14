@@ -7,9 +7,9 @@ RUN apt-get -y install openjdk-11-jdk wget
 RUN apt-get -y install curl
 RUN mkdir /usr/local/tomcat
 WORKDIR /usr/local/tomcat
-ADD https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.20/bin/apache-tomcat-10.1.20.tar.gz /usr/local/tomcat
+ADD https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.29/bin/apache-tomcat-10.1.29.tar.gz /usr/local/tomcat
 RUN tar xvfz apache*.tar.gz
-RUN mv apache-tomcat-10.1.20/* /usr/local/tomcat
+RUN mv apache-tomcat-10.1.29/* /usr/local/tomcat
 EXPOSE 8080
 # java
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
@@ -25,3 +25,7 @@ RUN curl -O -L https://github.com/bhaskarndas/sample-war/raw/main/sampletest.war
 
 
 CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
+
+
+### COMMANDS
+sudo docker run -v /home/ec2-user/tomcat:/usr/local/tomcat/webapps -d --name nmglabs -p 80:8080 nmglabs-tomcat:latest
